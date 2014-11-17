@@ -20,12 +20,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'active_record'
+require 'activerecord-mysql-pkdump'
 
-## Contributing
+ActiveRecord::Base.establish_connection(
+  adapter: 'mysql2',
+  database: '...',
+)
 
-1. Fork it ( https://github.com/[my-github-username]/activerecord-mysql-pkdump/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+ActiveRecord::SchemaDumper.dump
+#=> ...
+#   create_table "items", primary_key: "my_id", id: 'bigint(20) auto_increment PRIMARY KEY', force: true do |t|
+#     ...
+#   end
+#   ...
+```
