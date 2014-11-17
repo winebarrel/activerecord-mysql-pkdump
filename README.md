@@ -1,6 +1,6 @@
-# Activerecord::Mysql::Pkdump
+# activerecord-mysql-pkdump
 
-TODO: Write a gem description
+Dump the type information of a non-standard primary key.
 
 ## Installation
 
