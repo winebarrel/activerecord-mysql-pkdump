@@ -26,12 +26,10 @@ module ActiveRecord
           tbl.print %Q(, primary_key: "#{pk}")
         end
 
-        pk_type = @types[:primary_key]
         int_type = @types[:integer][:name]
 
         unless pkcol.sql_type =~ /\A#{int_type}/
-          pk_extra = pk_type.split(/\s+/).slice(1..-1).join(' ')
-          sql_type = "#{pkcol.sql_type} #{pk_extra}"
+          sql_type = [pkcol.sql_type, 'PRIMARY KEY', pkcol.extra].join(' ').strip
           tbl.print ", id: #{sql_type.inspect}"
         end
       else
