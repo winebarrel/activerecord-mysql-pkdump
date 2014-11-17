@@ -1,0 +1,7 @@
+module Activerecord
+  module Mysql
+    module Pkdump
+      VERSION = '0.0.1'
+    end
+  end
+end
