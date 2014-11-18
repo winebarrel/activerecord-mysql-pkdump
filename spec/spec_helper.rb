@@ -24,7 +24,6 @@ def mysql
     client = Mysql2::Client.new(
       host: 'localhost',
       username: 'root',
-      database: TEST_DATABASE
     )
 
     retval = yield(client)
@@ -52,6 +51,8 @@ end
 
 def create_tables(pk_name, pk_type)
   mysql do |client|
+    client.query("USE #{TEST_DATABASE}")
+
     client.query(<<-SQL)
       CREATE TABLE books (
         `#{pk_name}` #{pk_type},
