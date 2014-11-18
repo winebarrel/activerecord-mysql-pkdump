@@ -2,7 +2,7 @@
 
 Dump the type information of a non-standard primary key.
 
-[![Gem Version](https://badge.fury.io/rb/activerecord-mysql-pkdump.svg)](http://badge.fury.io/rb/activerecord-mysql-pkdump)
+[![Gem Version](https://badge.fury.io/rb/activerecord-mysql-pkdump.png)](http://badge.fury.io/rb/activerecord-mysql-pkdump)
 [![Build Status](https://travis-ci.org/winebarrel/activerecord-mysql-pkdump.svg?branch=master)](https://travis-ci.org/winebarrel/activerecord-mysql-pkdump)
 [![Coverage Status](https://coveralls.io/repos/winebarrel/activerecord-mysql-pkdump/badge.png?branch=master)](https://coveralls.io/r/winebarrel/activerecord-mysql-pkdump?branch=master)
 
